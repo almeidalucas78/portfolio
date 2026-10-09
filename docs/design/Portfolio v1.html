@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio — Lucas Almeida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" />
+<style>
+  html, body { margin: 0; padding: 0; background: #0a0a0f; }
+  body { font-family: 'JetBrains Mono', monospace; }
+  * { box-sizing: border-box; }
+  @keyframes blink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+  .cursor { animation: blink 1s steps(2) infinite; }
+  .skill-card:hover { border-color: #b44dff !important; box-shadow: 0 0 0 1px #b44dff, 0 0 30px -4px #b44dff99 !important; transform: translateY(-2px); }
+  .project-card:hover { transform: translateY(-2px); }
+  @keyframes pulse-neon {
+    0%, 100% { box-shadow: 0 0 18px #b44dff88, 0 0 36px #b44dff44; }
+    50%      { box-shadow: 0 0 26px #b44dffcc, 0 0 56px #b44dff77; }
+  }
+  .neon-btn:hover { animation: pulse-neon 1.2s ease-in-out infinite; transform: translateY(-1px); }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="portfolio.jsx"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { useEffect } = React;
+
+  function App() {
+    return (
+      <DesignCanvas title="Portfolio — Dark Neon" subtitle="Lucas Almeida · Fullstack Developer">
+        <DCSection id="desktop" title="Desktop · 1440">
+          <DCArtboard id="desktop-dark" label="Tema Escuro (padrão)" width={1440} height={5250}>
+            <Portfolio theme="dark" layout="desktop" />
+          </DCArtboard>
+          <DCArtboard id="desktop-light" label="Tema Claro" width={1440} height={5250}>
+            <Portfolio theme="light" layout="desktop" />
+          </DCArtboard>
+        </DCSection>
+        <DCSection id="mobile" title="Mobile · 390">
+          <DCArtboard id="mobile-dark" label="Tema Escuro" width={390} height={6900}>
+            <Portfolio theme="dark" layout="mobile" />
+          </DCArtboard>
+          <DCArtboard id="mobile-light" label="Tema Claro" width={390} height={6900}>
+            <Portfolio theme="light" layout="mobile" />
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
