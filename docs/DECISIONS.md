@@ -38,6 +38,9 @@ Deploy automático a cada push e integração nativa com o Next.js. A hospedagem
 ## 2026-10-04 · Site apenas em português
 O público principal é brasileiro: recrutadores e clientes freelancer.
 
+## 2026-10-08 · Next.js 16 sem Cache Components
+O `create-next-app` 16.4 ativa o Cache Components (`"use cache"`) por padrão. O projeto usa o modelo padrão de renderização: páginas estáticas deduzidas pelo Next, `generateStaticParams` e revalidação sob demanda com `revalidatePath`. Esse modelo cobre um site com poucas páginas e é mais simples de aprender. O Cache Components pode ser reavaliado depois do MVP.
+
 ## Pendentes
 - next-themes ou implementação própria do tema (fase 1)
 - Hospedagem do WordPress: Oracle Cloud Always Free ou opção barata (fase 7)
