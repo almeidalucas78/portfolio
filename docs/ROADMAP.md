@@ -14,8 +14,8 @@ Fase atual: **1**
 - [x] Estudo guiado: busca de dados e geração estática
 
 ### Fase 1: Fundação (semana 2)
-- [ ] Criar o projeto Next.js com TypeScript strict e App Router
-- [ ] Configurar o Tailwind com os tokens de cor e tipografia do design
+- [x] Criar o projeto Next.js com TypeScript strict e App Router
+- [x] Configurar o Tailwind com os tokens de cor e tipografia do design
 - [ ] Carregar as fontes com `next/font`
 - [ ] [decisão] next-themes ou implementação própria do tema
 - [ ] [você escreve] Alternância de tema claro e escuro sem piscar no carregamento

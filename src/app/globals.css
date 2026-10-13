@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/*
+ * Tokens do design (docs/design/site-core.jsx).
+ * O tema escuro é o padrão. O tema claro só redefine as variáveis em [data-theme="light"].
+ */
+@theme {
+  /* Remove a paleta padrão do Tailwind: só as cores do design existem. */
+  --color-*: initial;
+
+  --color-background: #080010;
+  --color-surface: #110022;
+  --color-border: #2a0d4d;
+  --color-accent: #b44dff;
+  --color-accent-2: #00f0ff;
+  --color-title: #ffffff;
+  --color-body: #a090b0;
+  --color-muted: #6a5a80;
+  --color-nav: rgba(8, 0, 16, 0.72);
+  --color-chip: rgba(180, 77, 255, 0.12);
+  --color-chip-border: rgba(180, 77, 255, 0.35);
+  --color-grid-line: rgba(180, 77, 255, 0.07);
+  --color-grid-line-strong: rgba(180, 77, 255, 0.12);
+  --color-stripe-a: #110022;
+  --color-stripe-b: #080010;
+
+  /* Classificação das métricas: bom, precisa melhorar e ruim. */
+  --color-good: #00f0ff;
+  --color-warn: #ffb547;
+  --color-bad: #ff4d6d;
+
+  /* Títulos fluidos: crescem com a largura da tela entre o tamanho mobile e o desktop. */
+  --text-display-hero: clamp(3.5rem, 8vw, 7.25rem);
+  --text-display-hero--line-height: 0.95;
+  --text-display-hero--letter-spacing: -0.04em;
+  --text-display-case: clamp(2.75rem, 6vw, 5.5rem);
+  --text-display-case--line-height: 0.98;
+  --text-display-case--letter-spacing: -0.035em;
+  --text-display-section: clamp(2.125rem, 4.2vw, 3.5rem);
+  --text-display-section--line-height: 1.05;
+  --text-display-section--letter-spacing: -0.02em;
+
+  /* Rótulos pequenos em mono, menores que o text-xs (12px). */
+  --text-2xs: 0.6875rem;
+  --text-3xs: 0.625rem;
+
+  --tracking-label: 0.16em;
+  --tracking-eyebrow: 0.2em;
+}
+
+/*
+ * Tokens que apontam para outras variáveis. "inline" faz a classe usar a variável direto.
+ * Sombras ficam aqui porque o Tailwind copia os valores de sombra para dentro da classe:
+ * apontando para --theme-*, a classe lê a variável e acompanha a troca de tema.
+ */
+@theme inline {
+  /* --font-space-grotesk e --font-jetbrains-mono serão criadas pelo next/font. */
+  --font-display: var(--font-space-grotesk, ui-sans-serif), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-jetbrains-mono, ui-monospace), ui-monospace, monospace;
+
+  --shadow-card: var(--theme-shadow-card);
+  --shadow-card-hover: var(--theme-shadow-card-hover);
+  --text-shadow-glow-title: var(--theme-glow-title);
+  --text-shadow-glow-accent: var(--theme-glow-accent);
+  --text-shadow-glow-cyan: var(--theme-glow-cyan);
+}
+
+:root {
+  /* Ajusta barras de rolagem e campos nativos do navegador ao tema. */
+  color-scheme: dark;
+
+  --theme-shadow-card: 0 0 0 1px rgba(180, 77, 255, 0.35), 0 0 24px -6px rgba(180, 77, 255, 0.35);
+  --theme-shadow-card-hover:
+    0 0 0 1px rgba(180, 77, 255, 0.9), 0 0 36px -4px rgba(180, 77, 255, 0.7),
+    0 0 60px -10px rgba(0, 240, 255, 0.35);
+  --theme-glow-title: 0 0 18px rgba(180, 77, 255, 0.55), 0 0 38px rgba(180, 77, 255, 0.25);
+  --theme-glow-accent: 0 0 14px rgba(180, 77, 255, 0.45);
+  --theme-glow-cyan: 0 0 14px rgba(0, 240, 255, 0.55);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-background: #f0edf5;
+  --color-surface: #ffffff;
+  --color-border: #e2d6f0;
+  --color-accent: #7b00cc;
+  --color-accent-2: #0090a8;
+  --color-title: #1a0b29;
+  --color-body: #4a3a60;
+  --color-muted: #7a6a90;
+  --color-nav: rgba(240, 237, 245, 0.85);
+  --color-chip: rgba(123, 0, 204, 0.08);
+  --color-chip-border: rgba(123, 0, 204, 0.3);
+  --color-grid-line: rgba(123, 0, 204, 0.05);
+  --color-grid-line-strong: rgba(123, 0, 204, 0.09);
+  --color-stripe-a: #ffffff;
+  --color-stripe-b: #ebe5f3;
+
+  --color-good: #00829a;
+  --color-warn: #b36b00;
+  --color-bad: #c4163a;
+
+  --theme-shadow-card: 0 0 0 1px rgba(123, 0, 204, 0.25), 0 6px 20px -10px rgba(123, 0, 204, 0.25);
+  --theme-shadow-card-hover:
+    0 0 0 1.5px rgba(123, 0, 204, 0.7), 0 12px 30px -8px rgba(123, 0, 204, 0.35);
+  --theme-glow-title: 0 0 14px rgba(123, 0, 204, 0.18);
+  --theme-glow-accent: 0 0 12px rgba(123, 0, 204, 0.25);
+  --theme-glow-cyan: 0 0 12px rgba(0, 144, 168, 0.25);
+}
