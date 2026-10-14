@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* light:bg-accent aplica o estilo quando o <html> está com data-theme="light". */
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
+
 /*
  * Tokens do design (docs/design/site-core.jsx).
  * O tema escuro é o padrão. O tema claro só redefine as variáveis em [data-theme="light"].
@@ -63,11 +66,21 @@
   --text-shadow-glow-title: var(--theme-glow-title);
   --text-shadow-glow-accent: var(--theme-glow-accent);
   --text-shadow-glow-cyan: var(--theme-glow-cyan);
+
+  /* Brilhos derivados do accent: color-mix acompanha a troca de tema sozinho. */
+  --shadow-nav: 0 0 24px -8px color-mix(in srgb, var(--color-accent) 40%, transparent);
+  --shadow-logo:
+    0 0 12px color-mix(in srgb, var(--color-accent) 53%, transparent),
+    inset 0 0 8px color-mix(in srgb, var(--color-accent) 27%, transparent);
+  --shadow-glow-line: 0 0 6px var(--color-accent);
 }
 
 :root {
   /* Ajusta barras de rolagem e campos nativos do navegador ao tema. */
   color-scheme: dark;
+
+  /* Âncoras (/#projetos) param abaixo do cabeçalho fixo de 64px. */
+  scroll-padding-top: 4rem;
 
   --theme-shadow-card: 0 0 0 1px rgba(180, 77, 255, 0.35), 0 0 24px -6px rgba(180, 77, 255, 0.35);
   --theme-shadow-card-hover:
@@ -76,6 +89,12 @@
   --theme-glow-title: 0 0 18px rgba(180, 77, 255, 0.55), 0 0 38px rgba(180, 77, 255, 0.25);
   --theme-glow-accent: 0 0 14px rgba(180, 77, 255, 0.45);
   --theme-glow-cyan: 0 0 14px rgba(0, 240, 255, 0.55);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
 }
 
 [data-theme="light"] {
