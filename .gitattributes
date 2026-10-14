@@ -1,0 +1,2 @@
+# Quebra de linha LF em todas as máquinas (o Prettier espera LF).
+* text=auto eol=lf

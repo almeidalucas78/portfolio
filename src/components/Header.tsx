@@ -7,7 +7,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 h-16 border-b border-accent/35 bg-nav shadow-nav backdrop-blur-[14px]">
       <div className="flex h-full items-center justify-between px-5 md:px-14">
-        <Link href="/" className="flex items-center gap-2.5" aria-label="Lucas Almeida, página inicial">
+        <Link
+          href="/"
+          className="flex items-center gap-2.5"
+          aria-label="Lucas Almeida, página inicial"
+        >
           <span
             aria-hidden="true"
             className="grid size-7 place-items-center rounded-sm border-[1.5px] border-accent text-[13px] font-bold text-accent shadow-logo"

@@ -20,7 +20,7 @@ Fase atual: **1**
 - [x] [decisão] next-themes ou implementação própria do tema
 - [x] [você escreve] Alternância de tema claro e escuro sem piscar no carregamento
 - [x] Cabeçalho e rodapé
-- [ ] ESLint e Prettier configurados
+- [x] ESLint e Prettier configurados
 - [ ] GitHub Actions rodando typecheck, lint e build a cada push
 - [x] [critério] Layout base visível no HTML sem JavaScript
 
