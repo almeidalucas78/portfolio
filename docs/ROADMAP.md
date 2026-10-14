@@ -1,6 +1,6 @@
 # Roadmap
 
-Legenda: **[você escreve]** o desenvolvedor escreve o código, a IA só orienta e revisa · **[critério]** critério de aceite · **[decisão]** escolha pendente
+Legenda: **[você escreve]** planejado para o desenvolvedor escrever; desde 2026-10-13 a IA escreve e o desenvolvedor acompanha · **[critério]** critério de aceite · **[decisão]** escolha pendente
 
 Fase atual: **1**
 
@@ -16,13 +16,13 @@ Fase atual: **1**
 ### Fase 1: Fundação (semana 2)
 - [x] Criar o projeto Next.js com TypeScript strict e App Router
 - [x] Configurar o Tailwind com os tokens de cor e tipografia do design
-- [ ] Carregar as fontes com `next/font`
-- [ ] [decisão] next-themes ou implementação própria do tema
-- [ ] [você escreve] Alternância de tema claro e escuro sem piscar no carregamento
-- [ ] Cabeçalho e rodapé
+- [x] Carregar as fontes com `next/font`
+- [x] [decisão] next-themes ou implementação própria do tema
+- [x] [você escreve] Alternância de tema claro e escuro sem piscar no carregamento
+- [x] Cabeçalho e rodapé
 - [ ] ESLint e Prettier configurados
 - [ ] GitHub Actions rodando typecheck, lint e build a cada push
-- [ ] [critério] Layout base visível no HTML sem JavaScript
+- [x] [critério] Layout base visível no HTML sem JavaScript
 
 ### Fase 2: Home (semanas 3 e 4)
 - [ ] [você escreve] Tipos Project, Experience e Profile

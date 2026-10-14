@@ -2,7 +2,7 @@
 
 Portfólio pessoal de um desenvolvedor web especializado em WordPress, SEO técnico e performance. O front é feito em Next.js com TypeScript e, na etapa 2, passa a consumir um WordPress headless pela REST API.
 
-O desenvolvedor está aprendendo Next.js neste projeto. Priorize que ele entenda o código, não apenas que o código funcione.
+A prioridade é colocar o portfólio no ar rápido. A IA escreve o código em passos pequenos e o desenvolvedor acompanha; explique de forma breve as decisões não óbvias. O estudo aprofundado de Next.js fica para outro projeto.
 
 ## Stack
 
@@ -48,7 +48,7 @@ Em toda tarefa que envolve páginas: o conteúdo e os links precisam estar no HT
 1. Antes de escrever código, apresente um plano curto e espere aprovação.
 2. Uma tarefa por vez, com mudanças pequenas e fáceis de revisar.
 3. Explique decisões não óbvias, principalmente sobre Server e Client Components, renderização e cache do Next.js.
-4. Tarefas marcadas como **[você escreve]** no ROADMAP são escritas pelo desenvolvedor. Nelas, não entregue o código pronto: oriente, dê dicas e revise o que ele escrever.
+4. Tarefas marcadas como **[você escreve]** no ROADMAP também são escritas pela IA (mudança de 2026-10-13, ver `docs/DECISIONS.md`). O desenvolvedor acompanha e revisa.
 5. Não adicione dependências sem perguntar.
 6. Não altere arquivos fora do escopo da tarefa.
 7. Não desfaça decisões registradas em `docs/DECISIONS.md` sem discutir antes.

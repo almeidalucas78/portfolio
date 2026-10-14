@@ -41,6 +41,11 @@ O público principal é brasileiro: recrutadores e clientes freelancer.
 ## 2026-10-08 · Next.js 16 sem Cache Components
 O `create-next-app` 16.4 ativa o Cache Components (`"use cache"`) por padrão. O projeto usa o modelo padrão de renderização: páginas estáticas deduzidas pelo Next, `generateStaticParams` e revalidação sob demanda com `revalidatePath`. Esse modelo cobre um site com poucas páginas e é mais simples de aprender. O Cache Components pode ser reavaliado depois do MVP.
 
+## 2026-10-13 · Tema claro e escuro com implementação própria
+Um script inline no `<head>` do root layout aplica `data-theme` no `<html>` antes da primeira pintura, lendo a escolha salva no `localStorage` ou, na primeira visita, a preferência do sistema (`prefers-color-scheme`). O botão de troca é um Client Component pequeno. O `next-themes` foi considerado, mas está sem release desde março de 2025 e gera aviso de script em componente a partir do Next.js 16.2 (issues #385 e #387). A implementação própria não adiciona dependência, mantém a página estática (um cookie a tornaria dinâmica) e serve de aprendizado do ciclo build, pintura e hidratação.
+
+## 2026-10-13 · IA escreve todo o código do portfólio
+O portfólio precisa ficar pronto logo. A IA passa a escrever todas as tarefas, inclusive as marcadas como [você escreve], em passos pequenos que o desenvolvedor acompanha. O estudo aprofundado de Next.js fica para um projeto separado.
+
 ## Pendentes
-- next-themes ou implementação própria do tema (fase 1)
 - Hospedagem do WordPress: Oracle Cloud Always Free ou opção barata (fase 7)
