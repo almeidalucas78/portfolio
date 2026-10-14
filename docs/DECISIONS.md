@@ -47,5 +47,8 @@ Um script inline no `<head>` do root layout aplica `data-theme` no `<html>` ante
 ## 2026-10-13 · IA escreve todo o código do portfólio
 O portfólio precisa ficar pronto logo. A IA passa a escrever todas as tarefas, inclusive as marcadas como [você escreve], em passos pequenos que o desenvolvedor acompanha. O estudo aprofundado de Next.js fica para um projeto separado.
 
+## 2026-10-14 · Sem GitHub Actions no MVP
+Para lançar mais rápido, o pipeline de CI foi pulado. Typecheck, lint, format:check e build continuam sendo rodados localmente antes de cada tarefa ser concluída. Pode voltar junto com o Lighthouse CI na fase 8.
+
 ## Pendentes
 - Hospedagem do WordPress: Oracle Cloud Always Free ou opção barata (fase 7)

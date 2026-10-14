@@ -2,7 +2,7 @@
 
 Legenda: **[você escreve]** planejado para o desenvolvedor escrever; desde 2026-10-13 a IA escreve e o desenvolvedor acompanha · **[critério]** critério de aceite · **[decisão]** escolha pendente
 
-Fase atual: **1**
+Fase atual: **2**
 
 ## Etapa 1: MVP no ar (cerca de 5 semanas)
 
@@ -21,11 +21,11 @@ Fase atual: **1**
 - [x] [você escreve] Alternância de tema claro e escuro sem piscar no carregamento
 - [x] Cabeçalho e rodapé
 - [x] ESLint e Prettier configurados
-- [ ] GitHub Actions rodando typecheck, lint e build a cada push
+- [ ] ~~GitHub Actions rodando typecheck, lint e build a cada push~~ (pulado em 2026-10-14, ver DECISIONS)
 - [x] [critério] Layout base visível no HTML sem JavaScript
 
 ### Fase 2: Home (semanas 3 e 4)
-- [ ] [você escreve] Tipos Project, Experience e Profile
+- [x] [você escreve] Tipos Project, Experience e Profile
 - [ ] Dados mockados em arquivos TypeScript
 - [ ] Hero
 - [ ] Cards de projeto
