@@ -80,5 +80,5 @@ A pasta `docs/design` contém o protótipo exportado do Claude Design. Ela é ap
 - Reimplemente tudo como componentes React em `src/components`, seguindo as convenções deste arquivo. Não copie blocos de HTML, CSS ou JavaScript do protótipo para o projeto.
 - Cores, fontes e espaçamentos do protótipo viram tokens do Tailwind. Nunca use os valores soltos direto nos componentes.
 - Os textos e projetos do protótipo são fictícios. O conteúdo real vem de `src/data` (etapa 1) e do WordPress (etapa 2).
-- Se o protótipo e as regras deste arquivo entrarem em conflito (por exemplo, conteúdo carregado só via JavaScript ou links feitos com onClick), as regras deste arquivo vencem. Avise sobre o conflito e proponha a solução.
+- O protótipo define só o visual, a organização e o que cada parte deve ter. A lógica do código dele não é referência. Se ela conflitar com as regras deste arquivo (por exemplo, links feitos com onClick), siga as regras sem precisar avisar. Avise apenas quando a regra obrigar a mudar algo visível ou o comportamento que o usuário percebe.
 - Nunca edite arquivos em `docs/design`.

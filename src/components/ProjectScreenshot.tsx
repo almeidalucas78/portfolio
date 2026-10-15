@@ -13,7 +13,7 @@ export function ProjectScreenshot({ project, sizes }: ProjectScreenshotProps) {
   if (project.screenshot) {
     return (
       <Image
-        src={project.scr  eenshot.src}
+        src={project.screenshot.src}
         alt={project.screenshot.alt}
         fill
         sizes={sizes}

@@ -28,7 +28,7 @@ Fase atual: **2**
 - [x] [você escreve] Tipos Project, Experience e Profile
 - [x] Dados mockados em arquivos TypeScript
 - [x] Hero
-- [ ] Cards de projeto
+- [x] Cards de projeto
 - [x] [você escreve] PerformanceBadge com a nota do PageSpeed
 - [ ] [você escreve] Filtro de categorias
 - [ ] Seções de stacks, experiência, sobre e contato
