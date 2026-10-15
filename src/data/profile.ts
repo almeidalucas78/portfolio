@@ -3,7 +3,8 @@ import type { Profile } from "@/types/profile";
 export const profile: Profile = {
   name: "Lucas Almeida",
   title: "Desenvolvedor Web",
-  heroPhrase: "WordPress, SEO técnico e performance",
+  specialty: "WordPress, SEO técnico e performance",
+  heroPhrase: "Desenvolvo sites rápidos, bem indexados e fáceis de manter.",
   availability: {
     isAvailable: true,
     label: "Disponível para projetos freelancer e novas oportunidades",

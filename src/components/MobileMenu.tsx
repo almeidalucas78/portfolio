@@ -30,9 +30,9 @@ export function MobileMenu({ children }: MobileMenuProps) {
         onClick={() => setIsOpen((open) => !open)}
         className="flex cursor-pointer flex-col gap-1 py-3 pl-2 md:hidden"
       >
-        <span className={`${barClass} w-[22px]`} />
+        <span className={`${barClass} w-5.5`} />
         <span className={`${barClass} ml-auto w-4`} />
-        <span className={`${barClass} w-[22px]`} />
+        <span className={`${barClass} w-5.5`} />
       </button>
 
       {/* Sempre no DOM: fechado, o painel só fica com display: none. */}

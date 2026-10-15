@@ -38,7 +38,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body className="flex min-h-dvh flex-col bg-background font-mono text-body">
+      {/* overflow-x-clip: corta brilhos decorativos que passam da borda sem quebrar o sticky do header. */}
+      <body className="flex min-h-dvh flex-col overflow-x-clip bg-background bg-grid font-mono text-body">
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

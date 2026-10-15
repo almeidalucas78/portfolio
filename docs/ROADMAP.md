@@ -27,9 +27,9 @@ Fase atual: **2**
 ### Fase 2: Home (semanas 3 e 4)
 - [x] [você escreve] Tipos Project, Experience e Profile
 - [x] Dados mockados em arquivos TypeScript
-- [ ] Hero
+- [x] Hero
 - [ ] Cards de projeto
-- [ ] [você escreve] PerformanceBadge com a nota do PageSpeed
+- [x] [você escreve] PerformanceBadge com a nota do PageSpeed
 - [ ] [você escreve] Filtro de categorias
 - [ ] Seções de stacks, experiência, sobre e contato
 - [ ] Configurar Vitest e Testing Library

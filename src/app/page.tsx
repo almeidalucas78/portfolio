@@ -1,9 +1,13 @@
-export default function Home() {
+import { Hero } from "@/components/Hero";
+import { getFeaturedProjects, getProfile } from "@/lib/content";
+
+export default async function Home() {
+  // Em paralelo: na etapa 2 cada chamada vai à API do WordPress.
+  const [profile, featuredProjects] = await Promise.all([getProfile(), getFeaturedProjects()]);
+
   return (
     <main>
-      <h1 className="font-display text-display-hero font-bold text-title text-shadow-glow-title">
-        Lucas Almeida
-      </h1>
+      <Hero profile={profile} featuredProjects={featuredProjects} />
     </main>
   );
 }

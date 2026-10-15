@@ -23,7 +23,11 @@ export type ContactLink = {
 
 export type Profile = {
   name: string;
+  /** Cargo exibido no hero, como "Desenvolvedor Web". */
   title: string;
+  /** Especialidade exibida ao lado do título, como "WordPress, SEO técnico e performance". */
+  specialty: string;
+  /** Frase curta abaixo do título no hero. */
   heroPhrase: string;
   availability: Availability;
   /** Texto da seção "Sobre", um item por parágrafo. */
