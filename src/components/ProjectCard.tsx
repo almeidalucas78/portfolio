@@ -8,7 +8,7 @@ import { Tag } from "./Tag";
 // invisível (after:inset-0) sobre o card, e o link "↗ site" fica acima dela (z-10).
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="relative flex flex-col overflow-hidden rounded-sm border border-border bg-surface shadow-card transition-all duration-250 hover:-translate-y-0.75 hover:shadow-card-hover has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-accent-2">
+    <article className="relative flex h-full flex-col overflow-hidden rounded-sm border border-border bg-surface shadow-card transition-all duration-250 hover:-translate-y-0.75 hover:shadow-card-hover has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-accent-2">
       <div className="relative aspect-16/10 border-b border-border">
         <ProjectScreenshot
           project={project}

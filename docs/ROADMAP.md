@@ -30,7 +30,7 @@ Fase atual: **2**
 - [x] Hero
 - [x] Cards de projeto
 - [x] [você escreve] PerformanceBadge com a nota do PageSpeed
-- [ ] [você escreve] Filtro de categorias
+- [x] [você escreve] Filtro de categorias
 - [ ] Seções de stacks, experiência, sobre e contato
 - [ ] Configurar Vitest e Testing Library
 - [ ] Testes do filtro e do PerformanceBadge
