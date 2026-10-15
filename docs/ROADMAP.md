@@ -26,7 +26,7 @@ Fase atual: **2**
 
 ### Fase 2: Home (semanas 3 e 4)
 - [x] [você escreve] Tipos Project, Experience e Profile
-- [ ] Dados mockados em arquivos TypeScript
+- [x] Dados mockados em arquivos TypeScript
 - [ ] Hero
 - [ ] Cards de projeto
 - [ ] [você escreve] PerformanceBadge com a nota do PageSpeed
