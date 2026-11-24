@@ -1,7 +1,9 @@
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
+import { technologies } from "@/data/technologies";
 import type { Profile } from "@/types/profile";
 import type { Project } from "@/types/project";
+import type { Technology } from "@/types/technology";
 import { selectFeatured, sortByOrder } from "./projects";
 
 // Ponto único de acesso ao conteúdo. Na etapa 1 lê os mocks de src/data; na etapa 2
@@ -18,4 +20,8 @@ export async function getProjects(): Promise<Project[]> {
 
 export async function getFeaturedProjects(): Promise<Project[]> {
   return selectFeatured(projects);
+}
+
+export async function getTechnologies(): Promise<Technology[]> {
+  return technologies;
 }
