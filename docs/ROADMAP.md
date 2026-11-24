@@ -2,7 +2,7 @@
 
 Legenda: **[você escreve]** planejado para o desenvolvedor escrever; desde 2026-10-13 a IA escreve e o desenvolvedor acompanha · **[critério]** critério de aceite · **[decisão]** escolha pendente
 
-Fase atual: **2**
+Fase atual: **3**
 
 ## Etapa 1: MVP no ar (cerca de 5 semanas)
 
@@ -33,7 +33,7 @@ Fase atual: **2**
 - [x] [você escreve] Filtro de categorias
 - [x] Seções de stacks, experiência, sobre e contato
 - [x] Configurar Vitest e Testing Library
-- [ ] Testes do filtro e do PerformanceBadge
+- [x] Testes do filtro e do PerformanceBadge
 - [x] [critério] Textos e links no HTML sem JavaScript
 - [x] [critério] Menu mobile sempre no DOM, oculto só via CSS
 

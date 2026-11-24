@@ -12,5 +12,6 @@ export default defineConfig({
     // jsdom simula o navegador (document, window) para testar componentes.
     environment: "jsdom",
     include: ["src/**/*.test.{ts,tsx}"],
+    setupFiles: ["src/test/setup.ts"],
   },
 });
