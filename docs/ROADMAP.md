@@ -31,11 +31,11 @@ Fase atual: **2**
 - [x] Cards de projeto
 - [x] [você escreve] PerformanceBadge com a nota do PageSpeed
 - [x] [você escreve] Filtro de categorias
-- [ ] Seções de stacks, experiência, sobre e contato
-- [ ] Configurar Vitest e Testing Library
+- [x] Seções de stacks, experiência, sobre e contato
+- [x] Configurar Vitest e Testing Library
 - [ ] Testes do filtro e do PerformanceBadge
-- [ ] [critério] Textos e links no HTML sem JavaScript
-- [ ] [critério] Menu mobile sempre no DOM, oculto só via CSS
+- [x] [critério] Textos e links no HTML sem JavaScript
+- [x] [critério] Menu mobile sempre no DOM, oculto só via CSS
 
 ### Fase 3: Página de case (semana 5)
 - [ ] [você escreve] Rota `/projetos/[slug]` com generateStaticParams

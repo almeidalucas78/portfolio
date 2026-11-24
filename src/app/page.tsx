@@ -1,3 +1,5 @@
+import { AboutSection } from "@/components/AboutSection";
+import { ContactSection } from "@/components/ContactSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { Hero } from "@/components/Hero";
 import { ProjectsSection } from "@/components/ProjectsSection";
@@ -26,6 +28,8 @@ export default async function Home() {
       <ProjectsSection projects={projects} />
       <StacksSection technologies={technologies} />
       <ExperienceSection experiences={experiences} />
+      <AboutSection profile={profile} />
+      <ContactSection profile={profile} />
     </main>
   );
 }
