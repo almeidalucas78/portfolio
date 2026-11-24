@@ -50,5 +50,8 @@ O portfólio precisa ficar pronto logo. A IA passa a escrever todas as tarefas, 
 ## 2026-10-14 · Sem GitHub Actions no MVP
 Para lançar mais rápido, o pipeline de CI foi pulado. Typecheck, lint, format:check e build continuam sendo rodados localmente antes de cada tarefa ser concluída. Pode voltar junto com o Lighthouse CI na fase 8.
 
+## 2026-10-18 · dynamicParams = false na página de case
+Com o padrão (`true`), um slug desconhecido é renderizado na hora da requisição e a 404 chega com o `<body>` vazio até o JavaScript rodar, o que fere o critério de conteúdo no HTML. Com `false`, só os slugs de `generateStaticParams` existem e qualquer outro recebe a 404 estática completa. Na etapa 2, projetos novos criados no WordPress só existirão depois de um novo build: rever esta decisão na fase 7, junto com a revalidação (por exemplo, um deploy hook da Vercel no `save_post`).
+
 ## Pendentes
 - Hospedagem do WordPress: Oracle Cloud Always Free ou opção barata (fase 7)

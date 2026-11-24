@@ -4,6 +4,8 @@ import type { ReactNode } from "react";
 type ButtonLinkProps = {
   href: string;
   variant?: "primary" | "secondary";
+  /** Site de fora do portfólio: abre em nova aba. */
+  external?: boolean;
   children: ReactNode;
 };
 
@@ -16,9 +18,13 @@ const variantClass = {
 };
 
 // Link com aparência de botão (NeonBtn do design). Navegação é sempre <Link>, nunca onClick.
-export function ButtonLink({ href, variant = "primary", children }: ButtonLinkProps) {
+export function ButtonLink({ href, variant = "primary", external, children }: ButtonLinkProps) {
   return (
-    <Link href={href} className={`${baseClass} ${variantClass[variant]}`}>
+    <Link
+      href={href}
+      className={`${baseClass} ${variantClass[variant]}`}
+      {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+    >
       {children}
     </Link>
   );

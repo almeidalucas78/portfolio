@@ -38,7 +38,7 @@ Fase atual: **3**
 - [x] [critério] Menu mobile sempre no DOM, oculto só via CSS
 
 ### Fase 3: Página de case (semana 5)
-- [ ] [você escreve] Rota `/projetos/[slug]` com generateStaticParams
+- [x] [você escreve] Rota `/projetos/[slug]` com generateStaticParams
 - [ ] Painel de PageSpeed e Core Web Vitals
 - [ ] [você escreve] INP e demais campos opcionais tratados sem quebrar o layout
 - [ ] Função que classifica as métricas em bom, precisa melhorar e ruim, com testes
