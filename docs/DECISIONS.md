@@ -53,5 +53,10 @@ Para lançar mais rápido, o pipeline de CI foi pulado. Typecheck, lint, format:
 ## 2026-10-18 · dynamicParams = false na página de case
 Com o padrão (`true`), um slug desconhecido é renderizado na hora da requisição e a 404 chega com o `<body>` vazio até o JavaScript rodar, o que fere o critério de conteúdo no HTML. Com `false`, só os slugs de `generateStaticParams` existem e qualquer outro recebe a 404 estática completa. Na etapa 2, projetos novos criados no WordPress só existirão depois de um novo build: rever esta decisão na fase 7, junto com a revalidação (por exemplo, um deploy hook da Vercel no `save_post`).
 
+## 2026-11-24 · WordPress na Oracle Cloud Always Free com Docker
+O mesmo `docker-compose.yml` do ambiente local roda em produção, sem custo e servindo de aprendizado de Docker. Riscos aceitos: manutenção da VM (atualizações, SSL, backups) por conta própria e a Oracle poder recuperar instâncias gratuitas ociosas. O estudo de Docker é feito durante as tarefas da fase 5, não em uma sessão separada.
+
+## 2026-11-24 · Deploy na Vercel antes do WordPress
+O site vai ao ar com o domínio provisório `*.vercel.app` e os dados em TypeScript, para já ter um link. Metadata, sitemap, JSON-LD e domínio próprio ficam para depois; a etapa 2 começa em seguida.
+
 ## Pendentes
-- Hospedagem do WordPress: Oracle Cloud Always Free ou opção barata (fase 7)

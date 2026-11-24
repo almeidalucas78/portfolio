@@ -27,3 +27,20 @@ export function getAvailableCategories(
     projects.some((project) => project.category === category),
   );
 }
+
+/**
+ * Projetos vizinhos para a navegação do case, dando a volta na lista:
+ * o anterior do primeiro é o último, e o próximo do último é o primeiro.
+ * Sem vizinhos (menos de dois projetos ou índice inválido), devolve undefined.
+ */
+export function getAdjacentProjects(
+  projects: readonly Project[],
+  index: number,
+): { previous: Project; next: Project } | undefined {
+  const total = projects.length;
+  if (total < 2 || index < 0 || index >= total) return undefined;
+  return {
+    previous: projects[(index - 1 + total) % total],
+    next: projects[(index + 1) % total],
+  };
+}

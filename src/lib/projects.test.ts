@@ -1,6 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { makeProject } from "@/test/factories";
-import { getAvailableCategories, matchesCategory, selectFeatured, sortByOrder } from "./projects";
+import {
+  getAdjacentProjects,
+  getAvailableCategories,
+  matchesCategory,
+  selectFeatured,
+  sortByOrder,
+} from "./projects";
 
 describe("sortByOrder", () => {
   it("ordena pelo campo order sem alterar a lista original", () => {
@@ -49,5 +55,25 @@ describe("getAvailableCategories", () => {
 
   it("devolve lista vazia quando não há projetos", () => {
     expect(getAvailableCategories([])).toEqual([]);
+  });
+});
+
+describe("getAdjacentProjects", () => {
+  const projects = ["a", "b", "c"].map((slug) => makeProject({ slug }));
+
+  it("devolve o anterior e o próximo de um projeto do meio", () => {
+    const adjacent = getAdjacentProjects(projects, 1);
+    expect(adjacent?.previous.slug).toBe("a");
+    expect(adjacent?.next.slug).toBe("c");
+  });
+
+  it("dá a volta na lista nas pontas", () => {
+    expect(getAdjacentProjects(projects, 0)?.previous.slug).toBe("c");
+    expect(getAdjacentProjects(projects, 2)?.next.slug).toBe("a");
+  });
+
+  it("não devolve vizinhos com menos de dois projetos ou índice inválido", () => {
+    expect(getAdjacentProjects([makeProject()], 0)).toBeUndefined();
+    expect(getAdjacentProjects(projects, 5)).toBeUndefined();
   });
 });

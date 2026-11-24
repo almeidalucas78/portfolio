@@ -2,7 +2,7 @@
 
 Legenda: **[você escreve]** planejado para o desenvolvedor escrever; desde 2026-10-13 a IA escreve e o desenvolvedor acompanha · **[critério]** critério de aceite · **[decisão]** escolha pendente
 
-Fase atual: **3**
+Fase atual: **4**
 
 ## Etapa 1: MVP no ar (cerca de 5 semanas)
 
@@ -42,8 +42,8 @@ Fase atual: **3**
 - [x] Painel de PageSpeed e Core Web Vitals
 - [x] [você escreve] INP e demais campos opcionais tratados sem quebrar o layout
 - [x] Função que classifica as métricas em bom, precisa melhorar e ruim, com testes
-- [ ] Navegação entre projetos anterior e próximo
-- [ ] [critério] Conteúdo do case no HTML sem JavaScript
+- [x] Navegação entre projetos anterior e próximo
+- [x] [critério] Conteúdo do case no HTML sem JavaScript
 
 ### Fase 4: Lançamento (fim da semana 5)
 - [ ] Confirmar com a Gear SEO o que pode ser divulgado sobre os clientes
@@ -81,7 +81,7 @@ Fase atual: **3**
 - [ ] [critério] Conteúdo vindo do WordPress presente no HTML sem JavaScript
 
 ### Fase 7: Hospedagem e revalidação
-- [ ] [decisão] Oracle Cloud Always Free ou hospedagem barata
+- [x] [decisão] Oracle Cloud Always Free ou hospedagem barata (Oracle, ver DECISIONS)
 - [ ] Publicar o WordPress, com Docker se for na Oracle
 - [ ] [você escreve] Rota `/api/revalidate` protegida por token
 - [ ] Hook no save_post do plugin chamando a revalidação
