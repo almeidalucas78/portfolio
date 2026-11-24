@@ -1,9 +1,12 @@
+import { experiences } from "@/data/experiences";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 import { technologies } from "@/data/technologies";
+import type { Experience } from "@/types/experience";
 import type { Profile } from "@/types/profile";
 import type { Project } from "@/types/project";
 import type { Technology } from "@/types/technology";
+import { sortByMostRecent } from "./experience";
 import { selectFeatured, sortByOrder } from "./projects";
 
 // Ponto único de acesso ao conteúdo. Na etapa 1 lê os mocks de src/data; na etapa 2
@@ -24,4 +27,8 @@ export async function getFeaturedProjects(): Promise<Project[]> {
 
 export async function getTechnologies(): Promise<Technology[]> {
   return technologies;
+}
+
+export async function getExperiences(): Promise<Experience[]> {
+  return sortByMostRecent(experiences);
 }

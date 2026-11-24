@@ -119,6 +119,10 @@
     inset 0 0 8px color-mix(in srgb, var(--color-accent) 27%, transparent);
   --shadow-glow-line: 0 0 6px var(--color-accent);
   --shadow-glow-dot: 0 0 8px var(--color-accent-2);
+  --shadow-timeline:
+    0 0 10px var(--color-accent), 0 0 20px color-mix(in srgb, var(--color-accent) 40%, transparent);
+  --shadow-timeline-dot:
+    0 0 10px var(--color-accent), 0 0 20px color-mix(in srgb, var(--color-accent) 53%, transparent);
   --shadow-terminal: var(--theme-shadow-card), 0 24px 48px -16px rgb(0 0 0 / 0.5);
   --text-shadow-glow-name:
     0 0 22px var(--color-accent), 0 0 50px color-mix(in srgb, var(--color-accent) 53%, transparent);
