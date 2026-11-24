@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { CaseHeader } from "@/components/CaseHeader";
+import { CasePerformance } from "@/components/CasePerformance";
 import { CaseStory } from "@/components/CaseStory";
 import { getProjects } from "@/lib/content";
 
@@ -29,6 +30,7 @@ export default async function ProjectPage({ params }: PageProps<"/projetos/[slug
     <main className="relative px-5 pt-14 pb-15 md:px-20 md:pb-25">
       <CaseHeader project={project} position={index + 1} total={projects.length} />
       <CaseStory project={project} />
+      <CasePerformance project={project} />
     </main>
   );
 }

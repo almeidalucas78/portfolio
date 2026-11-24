@@ -39,9 +39,9 @@ Fase atual: **3**
 
 ### Fase 3: Página de case (semana 5)
 - [x] [você escreve] Rota `/projetos/[slug]` com generateStaticParams
-- [ ] Painel de PageSpeed e Core Web Vitals
-- [ ] [você escreve] INP e demais campos opcionais tratados sem quebrar o layout
-- [ ] Função que classifica as métricas em bom, precisa melhorar e ruim, com testes
+- [x] Painel de PageSpeed e Core Web Vitals
+- [x] [você escreve] INP e demais campos opcionais tratados sem quebrar o layout
+- [x] Função que classifica as métricas em bom, precisa melhorar e ruim, com testes
 - [ ] Navegação entre projetos anterior e próximo
 - [ ] [critério] Conteúdo do case no HTML sem JavaScript
 

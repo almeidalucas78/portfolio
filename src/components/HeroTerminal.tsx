@@ -1,11 +1,6 @@
-import { getScoreRating, type Rating } from "@/lib/metrics";
+import { getScoreRating } from "@/lib/metrics";
+import { RATING_TEXT_CLASS } from "@/lib/ratingClasses";
 import type { Project } from "@/types/project";
-
-const ratingClass: Record<Rating, string> = {
-  good: "text-good",
-  warn: "text-warn",
-  bad: "text-bad",
-};
 
 // Rótulo completo (desktop) e abreviado (telas menores, onde o terminal tem duas colunas).
 const rows = [
@@ -50,7 +45,7 @@ export function HeroTerminal({ project }: { project: Project }) {
                   className="flex-1 -translate-y-1.5 border-b border-dotted border-border"
                 />
                 <dd
-                  className={`font-bold text-shadow-[0_0_8px_color-mix(in_srgb,currentColor_53%,transparent)] ${ratingClass[getScoreRating(score)]}`}
+                  className={`font-bold text-shadow-[0_0_8px_color-mix(in_srgb,currentColor_53%,transparent)] ${RATING_TEXT_CLASS[getScoreRating(score)]}`}
                 >
                   {score}
                 </dd>
